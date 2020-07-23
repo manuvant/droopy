@@ -72,4 +72,3 @@ const Products = () => {
 }
 
 export default Products
->>>>>>> 2550c088f2b0dcec304ce0fe5a04888559f96125
