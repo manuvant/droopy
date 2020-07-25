@@ -10,6 +10,8 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import Button from '@material-ui/core/Button';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 const API_URL = 'http://64.225.46.83:3010/api/products'
 
@@ -37,6 +39,7 @@ const Products = () => {
             })
             .catch(error => console.log(error))
     }, [])
+        
 
     return (
         <Container>
@@ -58,6 +61,9 @@ const Products = () => {
                                     <TableCell>{product.description}</TableCell>
                                     <TableCell>{product.price}</TableCell>
                                     <TableCell>{product.stock}</TableCell>
+                                    <Button variant="contained" color="secondary" startIcon={<DeleteIcon />}>
+                                        Delete
+                                    </Button>
                                 </TableRow>
                             ))
                         }
